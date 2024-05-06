@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { heroPic } from '../assets';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
     const [search, setSearch] = useState('');
+    const navigate = useNavigate();
 
     return (
         <div>
@@ -36,20 +38,55 @@ const HeroSection = () => {
                                 Workout.
                             </span>
                         </h2>
-                        <p className='pr-5 mb-5 text-base text-gray-300 md:text-lg'>
-                            Connecting Coaches and Clients:
-                            <br />
-                            platform for booking personal coaching services
+
+                        <p className='text-gray-500 text-lg'>
+                            Platform for booking personal coaching services
                         </p>
-                        <div className='flex items-center'>
-                            <input
-                                type='text'
-                                placeholder='Search...'
-                                className='bg-gray-700 h-10 px-5 pr-16 rounded-lg text-white outline-none focus:outline-lime-300'
-                                value={search}
-                                onChange={(e) => setSearch(e.target.value)}
-                            />
-                        </div>
+                        <form class='max-w-md mx-auto mt-5'>
+                            <label
+                                for='default-search'
+                                class='mb-2 text-sm font-medium text-gray-900 sr-only'
+                            >
+                                Search
+                            </label>
+                            <div class='relative'>
+                                <div class='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
+                                    <svg
+                                        class='w-4 h-4 text-gray-500 dark:text-gray-400'
+                                        aria-hidden='true'
+                                        xmlns='http://www.w3.org/2000/svg'
+                                        fill='none'
+                                        viewBox='0 0 20 20'
+                                    >
+                                        <path
+                                            stroke='currentColor'
+                                            stroke-linecap='round'
+                                            stroke-linejoin='round'
+                                            stroke-width='2'
+                                            d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z'
+                                        />
+                                    </svg>
+                                </div>
+                                <input
+                                    type='search'
+                                    className='block w-full p-4 ps-10 text-sm text-white  rounded-lg bg-gray-700 outline-none focus:outline-lime-300 '
+                                    placeholder='Search Categories, Coaches ...'
+                                    value={search}
+                                    onChange={(e) => setSearch(e.target.value)}
+                                />
+                                <button
+                                    type='submit'
+                                    className='text-white absolute end-2.5 bottom-2.5 bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 '
+                                    onClick={() => {
+                                        navigate(
+                                            `/properties/search/${search}`
+                                        );
+                                    }}
+                                >
+                                    Search
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
