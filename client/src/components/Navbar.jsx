@@ -9,19 +9,20 @@ import { setLogout } from '../redux/state';
 import { useSelector, useDispatch } from 'react-redux';
 
 const Navbar = () => {
+    //Toggle state (open/closed)
     const [toggleMenu, setToggleMenu] = useState(false);
 
+    //To check if user is registered
     const user = useSelector((state) => state.user);
     const dispatch = useDispatch();
 
+    //If clicked outside of toggle menu, toggle menu will close
     const navbarRef = useRef(null);
-
     const handleClickOutside = (event) => {
         if (navbarRef.current && !navbarRef.current.contains(event.target)) {
             setToggleMenu(false);
         }
     };
-
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
@@ -30,7 +31,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className='bg-slate-900'>
+        <div className='bg-black'>
             <nav>
                 <div className='max-w-screen-xl mx-auto '>
                     <div className='flex mx-auto justify-between px-5 '>
@@ -46,12 +47,9 @@ const Navbar = () => {
                                     Personal Coach
                                 </p>
                             </Link>
-
-                            {/* primary */}
                         </div>
-                        {/* secondary */}
+                        {/* Navigation toggle */}
                         <div className='flex gap-6'>
-                            {/* Mobile navigation toggle */}
                             <div className='flex items-center gap-10'>
                                 <div>
                                     <button className='rounded-full border-solid border-2 text-gray-200 border-lime-300 py-2 px-4 hover:bg-lime-300 hover:text-black'>
@@ -75,6 +73,7 @@ const Navbar = () => {
                                     className='flex flex-row justify-center items-center '
                                     onClick={() => setToggleMenu(!toggleMenu)}
                                 >
+                                    {/* Profile picture if user logged in or not (icon) */}
                                     {!user ? (
                                         <CiUser className='w-10 h-10 text-black bg-gray-200 rounded-[50%] p-1' />
                                     ) : (
@@ -97,8 +96,10 @@ const Navbar = () => {
                                     )}
                                 </button>
 
+                                {/* Showing different menu depending if user registered or not */}
+                                {/* If not registered: */}
                                 {toggleMenu && !user && (
-                                    <div className='absolute w-max top-20 shadow-md shadow-black right-0 text-white rounded-xl bg-slate-700 flex flex-col  p-5 '>
+                                    <div className='absolute w-max top-20 shadow-md shadow-black right-0 text-white rounded-xl bg-slate-700 flex flex-col  p-5 z-30'>
                                         <div className='flex flex-col gap-6 tracking-wider'>
                                             <Link
                                                 to='/login'
@@ -123,8 +124,10 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 )}
+
+                                {/* If  registered: */}
                                 {toggleMenu && user && (
-                                    <div className='absolute w-max top-20 shadow-md shadow-black right-0 text-white rounded-xl bg-slate-700 flex flex-col  p-5 '>
+                                    <div className='absolute w-max top-20 shadow-md shadow-black right-0 text-white rounded-xl bg-slate-700 flex flex-col  p-5 z-30'>
                                         <div className='flex flex-col gap-6 tracking-wider'>
                                             <Link
                                                 to={`/${user.id}/reservations`}
@@ -165,7 +168,6 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                {/* mobile navigation */}
             </nav>
         </div>
     );
