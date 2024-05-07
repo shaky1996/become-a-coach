@@ -11,6 +11,7 @@ import soccerIcon from './categories/soccer.svg';
 import tennisIcon from './categories/tennis.svg';
 import yogaIcon from './categories/yoga.svg';
 import swimmingIcon from './categories/swimming.svg'
+import categoryBg from './categories/category-bg6.webp'
 
 export {
     heroPic,
@@ -25,5 +26,6 @@ export {
     soccerIcon,
     tennisIcon,
     yogaIcon,
-    swimmingIcon
+    swimmingIcon,
+    categoryBg
 };
