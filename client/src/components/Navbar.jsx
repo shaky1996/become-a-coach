@@ -44,7 +44,7 @@ const Navbar = () => {
                             >
                                 <MdOutlineFitnessCenter className='h-14 w-14 bg-lime-300 rounded-xl ' />
                                 <p className='hidden lg:flex text-lime-300 text-2xl'>
-                                    Personal Coach
+                                    CoachBooker
                                 </p>
                             </Link>
                         </div>

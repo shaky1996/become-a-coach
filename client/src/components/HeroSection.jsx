@@ -29,11 +29,11 @@ const HeroSection = () => {
                         <h2 className='mb-5 font-sans text-5xl font-bold tracking-tight text-white sm:text-7xl  sm:leading-none text-center md:text-start'>
                             Find.
                             <br />
-                            Book.
-                            <br />
                             <span className='inline-block text-lime-300'>
-                                Workout.
+                                Book.
                             </span>
+                            <br />
+                            Workout.
                         </h2>
 
                         <p className='text-gray-500 text-lg text-center md:text-start'>
