@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { categoryList } from '../constants/data';
 import SVG from 'react-inlinesvg';
 import { categoryBg } from '../assets';
+import CategoryCard from './CategoryCard';
 
 const Categories = () => {
+    const [selectedCategory, setSelectedCategory] = useState('');
+        const [loading, setLoading] = useState(true);
+
     return (
         <div className='relative'>
             <div className='lg:max-w-screen-xl max-w-xl px-4 xl:px-0 mx-auto py-8  object-cover lg:py-12'>
                 <div className='w-full h-full  absolute left-0 -z-10 top-0 bg-black flex items-end justify-end'>
                     <img
                         src={categoryBg}
-                        className=' h-full object-contain blur-sm md:blur-0'
+                        className=' h-full object-cover blur-sm md:blur-0'
                         alt='Man working out'
                     />
                 </div>
@@ -26,7 +30,14 @@ const Categories = () => {
                             return (
                                 <button
                                     key={index}
-                                    className='flex flex-col items-center justify-center lg:p-4 gap-3 lg:gap-2 hover:fill-lime-500  hover:scale-110 transition duration-300 ease-in-out'
+                                    className={`flex flex-col items-center justify-center lg:p-4 gap-3 lg:gap-2 hover:text-lime-600 hover:fill-lime-600  hover:scale-110 transition duration-300 ease-in-out ${
+                                        item.label === selectedCategory
+                                            ? 'fill-lime-600 scale-110 text-lime-600 cursor-default'
+                                            : ''
+                                    }`}
+                                    onClick={() =>
+                                        setSelectedCategory(item.label)
+                                    }
                                 >
                                     <SVG
                                         src={item.image}
@@ -39,6 +50,10 @@ const Categories = () => {
                                 </button>
                             );
                         })}
+                    </div>
+                    <div className='mt-5 flex flex-wrap justify-center w-full gap-3'>
+                      
+                        <CategoryCard />
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@ const cors = require('cors');
 
 
 const authRoute = require('./routes/auth.js')
+const listingRoutes = require('./routes/listing.js');
 
 
 app.use(cors());
@@ -14,9 +15,11 @@ app.use(express.static('public'))
 
 //Routes
 app.use('/auth', authRoute)
+app.use('/properties', listingRoutes);
 
 
 
+//Mongoose Setup
 const PORT = 3001;
 mongoose
     .connect(process.env.MONGO_URL, {
