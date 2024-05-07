@@ -24,12 +24,9 @@ const HeroSection = () => {
                         alt='Coach looking at man pushing tire'
                     />
                 </div>
-                <div className='relative flex flex-col items-center justify-center md:items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl'>
-                    <div className='mb-16 lg:my-40 lg:max-w-lg lg:pr-5'>
-                        {/* <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-lime-300'>
-                          Brand new
-                      </p> */}
-                        <h2 className='mb-5 font-sans text-5xl font-bold tracking-tight text-white sm:text-6xl sm:leading-none'>
+                <div className='relative flex flex-col items-center justify-center md:items-start w-full max-w-xl px-4 mx-auto xl:px-0 lg:max-w-screen-xl'>
+                    <div className=' lg:my-40 lg:max-w-lg lg:pr-5'>
+                        <h2 className='mb-5 font-sans text-5xl font-bold tracking-tight text-white sm:text-7xl  sm:leading-none text-center md:text-start'>
                             Find.
                             <br />
                             Book.
@@ -39,7 +36,7 @@ const HeroSection = () => {
                             </span>
                         </h2>
 
-                        <p className='text-gray-500 text-lg'>
+                        <p className='text-gray-500 text-lg text-center md:text-start'>
                             Platform for booking personal coaching services
                         </p>
                         <form class='max-w-md mx-auto mt-5'>

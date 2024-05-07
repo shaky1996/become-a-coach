@@ -31,9 +31,9 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className='bg-black'>
+        <div className='bg-black sticky top-0 z-40'>
             <nav>
-                <div className='max-w-screen-xl mx-auto '>
+                <div className='w-full mx-auto '>
                     <div className='flex mx-auto justify-between px-5 '>
                         {/* Primary menu and logo */}
                         <div className='flex items-center gap-16 my-5'>
@@ -52,7 +52,7 @@ const Navbar = () => {
                         <div className='flex gap-6'>
                             <div className='flex items-center gap-10'>
                                 <div>
-                                    <button className='rounded-full border-solid border-2 text-gray-200 border-lime-300 py-2 px-4 hover:bg-lime-300 hover:text-black'>
+                                    <button className='rounded-full border-solid border-2 text-gray-200 border-lime-300 py-2 px-4 hover:bg-lime-300 hover:text-black hidden sm:flex'>
                                         {user ? (
                                             <Link to='/create-listing'>
                                                 Become a Coach
@@ -66,13 +66,18 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <div
-                                className='flex items-center justify-center text-lime-300 relative '
+                                className='flex items-center justify-center text-lime-300 relative'
                                 ref={navbarRef}
                             >
                                 <button
                                     className='flex flex-row justify-center items-center '
                                     onClick={() => setToggleMenu(!toggleMenu)}
                                 >
+                                    {!toggleMenu ? (
+                                        <IoMenu className='w-10 h-10' />
+                                    ) : (
+                                        <IoMdClose className='w-10 h-10' />
+                                    )}
                                     {/* Profile picture if user logged in or not (icon) */}
                                     {!user ? (
                                         <CiUser className='w-10 h-10 text-black bg-gray-200 rounded-[50%] p-1' />
@@ -89,18 +94,13 @@ const Navbar = () => {
                                             }}
                                         />
                                     )}
-                                    {!toggleMenu ? (
-                                        <IoMenu className='w-10 h-10' />
-                                    ) : (
-                                        <IoMdClose className='w-10 h-10' />
-                                    )}
                                 </button>
 
                                 {/* Showing different menu depending if user registered or not */}
                                 {/* If not registered: */}
                                 {toggleMenu && !user && (
-                                    <div className='absolute w-max top-20 shadow-md shadow-black right-0 text-white rounded-xl bg-slate-700 flex flex-col  p-5 z-30'>
-                                        <div className='flex flex-col gap-6 tracking-wider'>
+                                    <div className='absolute w-max top-20 shadow-md shadow-black right-0 text-white rounded-xl bg-slate-800 flex flex-col  p-5 z-30'>
+                                        <div className='flex flex-col gap-6 tracking-wider '>
                                             <Link
                                                 to='/login'
                                                 className='hover:text-lime-300 '
@@ -127,7 +127,7 @@ const Navbar = () => {
 
                                 {/* If  registered: */}
                                 {toggleMenu && user && (
-                                    <div className='absolute w-max top-20 shadow-md shadow-black right-0 text-white rounded-xl bg-slate-700 flex flex-col  p-5 z-30'>
+                                    <div className='absolute w-max top-20 shadow-md shadow-black right-0 text-white rounded-xl bg-slate-800 flex flex-col  p-5 z-30'>
                                         <div className='flex flex-col gap-6 tracking-wider'>
                                             <Link
                                                 to={`/${user.id}/reservations`}
