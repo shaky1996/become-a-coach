@@ -12,6 +12,7 @@ import tennisIcon from './categories/tennis.svg';
 import yogaIcon from './categories/yoga.svg';
 import swimmingIcon from './categories/swimming.svg'
 import categoryBg from './categories/category-bg6.webp'
+import loginBg from './images/login-bg.webp'
 
 export {
     heroPic,
@@ -27,5 +28,6 @@ export {
     tennisIcon,
     yogaIcon,
     swimmingIcon,
-    categoryBg
+    categoryBg,
+    loginBg
 };

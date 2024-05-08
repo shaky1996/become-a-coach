@@ -1,16 +1,16 @@
 import './App.css';
-import {  Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import Navbar from './components/Navbar';
 
-
 function App() {
+    const { pathname } = useLocation();
     return (
         <>
-        <Navbar />
-        
+            {pathname !== '/login' && pathname !== '/register' && <Navbar />}
+
             <Routes>
                 <Route
                     path='/'
