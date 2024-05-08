@@ -43,7 +43,7 @@ const Navbar = () => {
                                 className='flex flex-row  justify-center items-center gap-3'
                             >
                                 <MdOutlineFitnessCenter className='h-14 w-14 bg-lime-300 rounded-xl ' />
-                                <p className='hidden lg:flex text-lime-300 text-2xl'>
+                                <p className='flex text-lime-300 text-2xl'>
                                     CoachBooker
                                 </p>
                             </Link>
@@ -120,7 +120,7 @@ const Navbar = () => {
                                                 to='/register'
                                                 className='hover:text-lime-300 '
                                             >
-                                                Become A Coach
+                                                Post Your Service
                                             </Link>
                                         </div>
                                     </div>
@@ -151,7 +151,7 @@ const Navbar = () => {
                                             </Link>
                                             <hr />
                                             <Link to='/create-listing'>
-                                                Become A Coach
+                                                Post Your Service
                                             </Link>
                                             <hr />
                                             <Link

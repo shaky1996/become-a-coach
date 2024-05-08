@@ -13,7 +13,10 @@ import {
     swimmingIcon,
     certifiedLogo1,
     certifiedLogo2,
-    certifiedLogo3
+    certifiedLogo3,
+    step1img,
+    step2img,
+    step3img
 } from '../assets';
 
 export const categoryList = [
@@ -68,7 +71,6 @@ export const categoryList = [
     }
 ];
 
-
 export const certifications = [
     {
         label: 'National Academy of Sports Medicine',
@@ -81,5 +83,25 @@ export const certifications = [
     {
         label: 'National Council on Strength & Fitness',
         image: certifiedLogo3
+    }
+];
+
+export const steps = [
+    {
+        label: 'Create account',
+        description:
+            'Log In or create your account',
+        image: step1img
+    },
+    {
+        label: 'Book personal coach',
+        description:
+            'Find and book coach you like',
+        image: step2img
+    },
+    {
+        label: 'Workout!',
+        description: 'Get stronger with your new mentor',
+        image: step3img
     }
 ];

@@ -16,6 +16,10 @@ import loginBg from './images/login-bg.webp';
 import certifiedLogo1 from './certificationsLogo/certifiedLogo1.png';
 import certifiedLogo2 from './certificationsLogo/certifedLogo2.png';
 import certifiedLogo3 from './certificationsLogo/certifiedLogo3.png';
+import step1img from './steps/step1.png';
+import step2img from './steps/step2.png';
+import step3img from './steps/step3.png';
+import stepsBg from './steps/bg-steps.webp'
 
 export {
     heroPic,
@@ -35,5 +39,9 @@ export {
     loginBg,
     certifiedLogo1,
     certifiedLogo2,
-    certifiedLogo3
+    certifiedLogo3,
+    step1img,
+    step2img,
+    step3img,
+    stepsBg
 };
