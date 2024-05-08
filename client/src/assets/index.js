@@ -10,9 +10,12 @@ import runningIcon from './categories/running.svg';
 import soccerIcon from './categories/soccer.svg';
 import tennisIcon from './categories/tennis.svg';
 import yogaIcon from './categories/yoga.svg';
-import swimmingIcon from './categories/swimming.svg'
-import categoryBg from './categories/category-bg6.webp'
-import loginBg from './images/login-bg.webp'
+import swimmingIcon from './categories/swimming.svg';
+import categoryBg from './categories/category-bg6.webp';
+import loginBg from './images/login-bg.webp';
+import certifiedLogo1 from './certificationsLogo/certifiedLogo1.png';
+import certifiedLogo2 from './certificationsLogo/certifedLogo2.png';
+import certifiedLogo3 from './certificationsLogo/certifiedLogo3.png';
 
 export {
     heroPic,
@@ -29,5 +32,8 @@ export {
     yogaIcon,
     swimmingIcon,
     categoryBg,
-    loginBg
+    loginBg,
+    certifiedLogo1,
+    certifiedLogo2,
+    certifiedLogo3
 };

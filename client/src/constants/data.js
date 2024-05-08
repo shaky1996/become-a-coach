@@ -10,7 +10,10 @@ import {
     runningIcon,
     nutritionIcon,
     cyclingIcon,
-    swimmingIcon
+    swimmingIcon,
+    certifiedLogo1,
+    certifiedLogo2,
+    certifiedLogo3
 } from '../assets';
 
 export const categoryList = [
@@ -62,5 +65,21 @@ export const categoryList = [
     {
         label: 'Swimming',
         image: swimmingIcon
+    }
+];
+
+
+export const certifications = [
+    {
+        label: 'National Academy of Sports Medicine',
+        image: certifiedLogo1
+    },
+    {
+        label: 'International Sports Sciences Association',
+        image: certifiedLogo2
+    },
+    {
+        label: 'National Council on Strength & Fitness',
+        image: certifiedLogo3
     }
 ];

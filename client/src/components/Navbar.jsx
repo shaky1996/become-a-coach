@@ -55,11 +55,11 @@ const Navbar = () => {
                                     <button className='rounded-full border-solid border-2 text-gray-200 border-lime-300 py-2 px-4 hover:bg-lime-300 hover:text-black hidden sm:flex'>
                                         {user ? (
                                             <Link to='/create-listing'>
-                                                Become a Coach
+                                                Coach? Click here
                                             </Link>
                                         ) : (
                                             <Link to='/register'>
-                                                Become a Coach
+                                                Coach? Click here
                                             </Link>
                                         )}
                                     </button>
