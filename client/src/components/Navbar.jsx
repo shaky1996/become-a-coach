@@ -92,6 +92,7 @@ const Navbar = () => {
                                                 objectFit: 'cover',
                                                 borderRadius: '50%'
                                             }}
+                                            className='w-10 h-10'
                                         />
                                     )}
                                 </button>
