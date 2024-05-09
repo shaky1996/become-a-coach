@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { steps } from '../constants/data';
+import { useNavigate } from 'react-router-dom';
 
 const Accordion = () => {
     const [openStep, setOpenStep] = useState(0);
@@ -7,6 +8,8 @@ const Accordion = () => {
     const handleClick = (index) => {
         setOpenStep((prevStep) => (prevStep === index ? prevStep : index));
     };
+
+    const navigate = useNavigate()
 
     return (
         <div className='grid grid-cols-1 lg:grid-cols-2 text-gray-600 items-center justify-center gap-5'>
@@ -35,7 +38,7 @@ const Accordion = () => {
                     </div>
                 ))}
             </div>
-            <div>
+            <div className='flex flex-col items-center justify-center'>
                 {openStep !== null && (
                     <img
                         src={steps[openStep].image}
@@ -43,6 +46,14 @@ const Accordion = () => {
                         className='max-w-full  rounded-xl'
                     />
                 )}
+                <button
+                    className='mt-10 text-white  bg-blue-700 hover:bg-blue-800  rounded-lg text-md px-4 py-2 '
+                    onClick={() => {
+                        navigate('/register');
+                    }}
+                >
+                    Create Account
+                </button>
             </div>
         </div>
     );

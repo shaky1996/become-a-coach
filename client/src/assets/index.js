@@ -20,6 +20,12 @@ import step1img from './steps/step1.png';
 import step2img from './steps/step2.png';
 import step3img from './steps/step3.png';
 import stepsBg from './steps/bg-steps.webp'
+import person1 from './fakePeople/person1.jpg'
+import person2 from './fakePeople/person2.jpg';
+import person3 from './fakePeople/person3.jpg'
+import person4 from './fakePeople/person4.jpg';
+import person5 from './fakePeople/person5.jpg';
+import person6 from './fakePeople/person6.jpg';
 
 export {
     heroPic,
@@ -43,5 +49,11 @@ export {
     step1img,
     step2img,
     step3img,
-    stepsBg
+    stepsBg,
+    person1,
+    person2,
+    person3,
+    person4,
+    person5,
+    person6
 };

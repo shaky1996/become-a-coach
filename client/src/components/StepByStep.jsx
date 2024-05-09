@@ -20,7 +20,7 @@ const StepByStep = () => {
                     <p className='text-xl text-center md:text-start text-white'>
                         3 easy steps to get you started
                     </p>
-                    <div className='mt-10 '>
+                    <div className='mt-10 mb-10'>
        
                         <Accordion />
                     </div>
