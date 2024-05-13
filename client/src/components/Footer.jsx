@@ -17,8 +17,8 @@ const Footer = () => {
                             to='/'
                             className='flex flex-row  justify-center items-center gap-3'
                         >
-                            <MdOutlineFitnessCenter className='h-14 w-14 bg-lime-300 rounded-xl ' />
-                            <p className='flex text-lime-300 text-2xl'>
+                            <MdOutlineFitnessCenter className='h-10 w-10 md:h-14 md:w-14 bg-lime-300 rounded-xl ' />
+                            <p className='flex text-lime-300 text-xl md:text-2xl'>
                                 CoachBooker
                             </p>
                         </Link>
@@ -44,7 +44,10 @@ const Footer = () => {
                         </Link>
                     </div>
                 </div>
-                <div className='mt-5 flex flex-col items-center justify-center text-gray-500 text-sm gap-2'>
+                <div>
+                    
+                </div>
+                <div className='mt-5 flex flex-col items-center justify-center text-gray-500 text-xs gap-2'>
                     <p className=''>
                         &copy;{currentYear} CoachBooker. All Rights Reserved.
                     </p>

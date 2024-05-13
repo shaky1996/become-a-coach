@@ -42,8 +42,8 @@ const Navbar = () => {
                                 to='/'
                                 className='flex flex-row  justify-center items-center gap-3'
                             >
-                                <MdOutlineFitnessCenter className='h-14 w-14 bg-lime-300 rounded-xl ' />
-                                <p className='flex text-lime-300 text-2xl'>
+                                <MdOutlineFitnessCenter className='h-10 w-10 md:h-14 md:w-14 bg-lime-300 rounded-xl ' />
+                                <p className='flex text-lime-300 text-xl md:text-2xl'>
                                     CoachBooker
                                 </p>
                             </Link>

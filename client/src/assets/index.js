@@ -26,6 +26,7 @@ import person3 from './fakePeople/person3.jpg'
 import person4 from './fakePeople/person4.jpg';
 import person5 from './fakePeople/person5.jpg';
 import person6 from './fakePeople/person6.jpg';
+import potentialBg from './images/potential-bg.png'
 
 export {
     heroPic,
@@ -55,5 +56,6 @@ export {
     person3,
     person4,
     person5,
-    person6
+    person6,
+    potentialBg
 };
