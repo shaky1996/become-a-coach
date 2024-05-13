@@ -41,7 +41,7 @@ const HeroSection = () => {
                         </p>
                         <form class='max-w-md mx-auto mt-5'>
                             <label
-                                for='default-search'
+                                for='search'
                                 class='mb-2 text-sm font-medium text-gray-900 sr-only'
                             >
                                 Search
@@ -66,6 +66,7 @@ const HeroSection = () => {
                                 </div>
                                 <input
                                     type='search'
+                                    id='search'
                                     className='block w-full p-4 ps-10 text-sm text-white  rounded-lg bg-gray-700 outline-none focus:outline-lime-300 '
                                     placeholder='Search Categories, Coaches ...'
                                     value={search}

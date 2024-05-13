@@ -33,8 +33,8 @@ const Navbar = () => {
     return (
         <div className='bg-black sticky top-0 z-40'>
             <nav>
-                <div className='w-full mx-auto '>
-                    <div className='flex mx-auto justify-between px-5 '>
+                <div className='max-w-screen-xl mx-auto '>
+                    <div className='flex mx-auto justify-between px-5 lg:px-0 '>
                         {/* Primary menu and logo */}
                         <div className='flex items-center gap-16 my-5'>
                             {/* logo */}

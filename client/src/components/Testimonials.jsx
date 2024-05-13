@@ -1,7 +1,10 @@
 import React from 'react';
 import { fakePeople } from '../constants/data';
+import { useNavigate } from 'react-router-dom';
 
 const Testimonials = () => {
+    const navigate = useNavigate()
+
     return (
         <div className='relative'>
             <div className='lg:max-w-screen-xl max-w-xl px-4 xl:px-0 mx-auto py-8  object-cover lg:py-12'>
@@ -18,7 +21,7 @@ const Testimonials = () => {
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-white'>
                             {fakePeople.map((person, index) => (
                                 <div
-                                    className='flex flex-col  gap-4 border border-gray-500 rounded-xl p-5 hover:border-lime-300'
+                                    className='flex flex-col  gap-4 border-2 border-gray-500 rounded-xl p-5 hover:border-lime-300'
                                     key={index}
                                 >
                                     <div className='flex flex-row items-center gap-5'>
@@ -37,13 +40,27 @@ const Testimonials = () => {
                                             </span>
                                             {person.review}
                                             <span className='text-xl text-gray-500 italic'>
-                                                
                                                 "
                                             </span>
                                         </p>
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        <div className='flex flex-col items-center justify-center mt-20  p-5'>
+                            <h1 className='font-sans text-4xl font-bold tracking-tight text-lime-300 sm:text-5xl  sm:leading-none text-center '>
+                                Unlock Your Potential
+                            </h1>
+
+                            <button
+                                className='mt-8 text-white  bg-blue-700 hover:bg-blue-800  rounded-lg text-md md:text-lg px-4 py-2 '
+                                onClick={() => {
+                                    navigate('/register');
+                                }}
+                            >
+                                Create Account
+                            </button>
                         </div>
                     </div>
                 </div>

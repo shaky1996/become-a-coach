@@ -21,7 +21,6 @@ const StepByStep = () => {
                         3 easy steps to get you started
                     </p>
                     <div className='mt-10 mb-10'>
-       
                         <Accordion />
                     </div>
                 </div>

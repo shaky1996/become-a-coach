@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
     const { pathname } = useLocation();
@@ -25,6 +26,7 @@ function App() {
                     element={<LoginPage />}
                 />
             </Routes>
+            {pathname !== '/login' && pathname !== '/register' && <Footer />}
         </>
     );
 }
