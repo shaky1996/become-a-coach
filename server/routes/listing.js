@@ -59,7 +59,7 @@ router.post('/create', upload.array('listingPhotos'), async (req, res) => {
         res.status(200).json(newListing);
     } catch (err) {
         res.status(409).json({
-            message: 'Fail to create Listing',
+            message: 'Failed to create Listing',
             error: err.message
         });
         console.log(err);

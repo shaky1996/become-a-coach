@@ -10,7 +10,7 @@ const ListingSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        type: {
+        session: {
             type: String,
             required: true
         },

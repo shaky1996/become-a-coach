@@ -15,7 +15,7 @@ app.use(express.static('public'))
 
 //Routes
 app.use('/auth', authRoute)
-app.use('/properties', listingRoutes);
+app.use('/listing', listingRoutes);
 
 
 
